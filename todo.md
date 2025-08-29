@@ -44,8 +44,9 @@
 - [x] Atualizar schema do banco para incluir tabela de contatos
 - [x] Executar testes e validar funcionamento
 - [x] Todos os 30 testes passaram com sucesso!
+- [x] Ajustar Docker Compose para executar projeto e testes
 
-## Entrega
-- [ ] Documentar os testes implementados
-- [ ] Preparar arquivos para entrega
+## Entrega ✓
+- [x] Documentar os testes implementados
+- [x] Preparar arquivos para entrega
 

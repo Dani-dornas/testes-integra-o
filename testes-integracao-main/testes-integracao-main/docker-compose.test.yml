@@ -27,6 +27,32 @@ services:
     networks:
       - test-network
 
+  app-test:
+    build:
+      context: .
+      dockerfile: Dockerfile.test
+    container_name: app-test
+    environment:
+      NODE_ENV: test
+      DB_HOST: postgres
+      DB_USER: postgres
+      DB_PASSWORD: 123
+      DB_NAME: bdaula
+      DB_PORT: 5432
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+      REDIS_PASSWORD: ""
+      JWT_SECRET: "@123456789!@"
+      JWT_EXPIRES_IN: "1h"
+    depends_on:
+      - postgres
+      - redis
+    networks:
+      - test-network
+    command: npm test
+
 networks:
   test-network:
     driver: bridge
+
+
